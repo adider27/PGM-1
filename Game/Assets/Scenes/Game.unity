@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1775844, g: 0.22233044, b: 0.30452433, a: 1}
+  m_IndirectSpecularColor: {r: 0.17760716, g: 0.22234572, b: 0.30456367, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -587,12 +587,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3425fe9d06d84489bdcd2d3507c77ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 3839127558488562483, guid: 80f5747216553499b89d993c0a4d09b1, type: 3}
   titikRespown: {fileID: 1173630829}
   skorTeks: {fileID: 1183757025}
   tombolMulai: {fileID: 1270014000}
   player: {fileID: 1269964312}
   Teks: {fileID: 1183757023}
+  obstacle: {fileID: 3839127558488562483, guid: 80f5747216553499b89d993c0a4d09b1, type: 3}
+  obs: {fileID: 1147643361}
+  Skor: {fileID: 0}
+--- !u!114 &1147643361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3839127558488562484, guid: 80f5747216553499b89d993c0a4d09b1, type: 3}
+  m_PrefabInstance: {fileID: 3839127559012277554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2428896244104667a3ffdfeba80db40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1173630828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1331,10 @@ PrefabInstance:
     - target: {fileID: 3839127558488562483, guid: 80f5747216553499b89d993c0a4d09b1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839127558488562484, guid: 80f5747216553499b89d993c0a4d09b1, type: 3}
+      propertyPath: speedIncreasePerPoint
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3839127558488562487, guid: 80f5747216553499b89d993c0a4d09b1, type: 3}
       propertyPath: m_RootOrder

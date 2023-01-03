@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject obstacle;
     public Transform titikRespown;
     int skor = 0;
 
@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject Teks;
 
-
+    public GameObject obstacle;
+    [SerializeField] Obstacle obs;
+    [SerializeField] Text Skor;    
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +37,11 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            float waitTime = Random.Range(0.5f, 2f);
+            float waitTime = Random.Range(0.5f, 1.5f);
 
             yield return new WaitForSeconds(waitTime);
 
+            obs.speed += obs.speedIncreasePerPoint;
             Instantiate(obstacle, titikRespown.position, Quaternion.identity);
         }
     }
@@ -49,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         skor++;
         skorTeks.text = skor.ToString();
+
     }
 
 
